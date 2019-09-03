@@ -1,0 +1,89 @@
+CREATE TABLE `kost-hunter`.`admin` (
+  `idAdmin` INT NOT NULL,
+  `namaAdmin` VARCHAR(45) NULL,
+  `usiaAdmin` VARCHAR(45) NULL,
+  `usernama` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
+  PRIMARY KEY (`idAdmin`));
+
+
+CREATE TABLE `kost-hunter`.`hunian` (
+  `idH` INT NOT NULL,
+  `namaH` VARCHAR(45) NULL,
+  `typeH` VARCHAR(45) NULL,
+  `lokasiH` VARCHAR(45) NULL,
+  `hargaH` INT NULL,
+  `fasilitasH` VARCHAR(45) NULL,
+  PRIMARY KEY (`idH`));
+
+CREATE TABLE `kost-hunter`.`hunt` (
+  `idUser` INT NOT NULL,
+  `jadwal` VARCHAR(45) NULL,
+  `kontak` VARCHAR(45) NULL);
+
+CREATE TABLE `kost-hunter`.`user` (
+  `idUser` INT NOT NULL,
+  `username` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
+  `nama` VARCHAR(45) NULL,
+  `email` VARCHAR(45) NULL,
+  `umur` VARCHAR(45) NULL,
+  `gender` VARCHAR(45) NULL,
+  `kontak` VARCHAR(45) NULL,
+  PRIMARY KEY (`idUser`));
+
+CREATE TABLE `kost-hunter`.`buktipembayaran` (
+  `idBukti` INT NOT NULL,
+  `nama` VARCHAR(45) NULL,
+  `namaH` VARCHAR(45) NULL,
+  `foto` VARCHAR(45) NULL,
+  PRIMARY KEY (`idBukti`));
+
+
+INSERT INTO `kost-hunter`.`admin` (`idAdmin`, `namaAdmin`, `usiaAdmin`, `usernama`, `password`) VALUES ('11', 'Janu', '20', 'januaw', 'januaw');
+INSERT INTO `kost-hunter`.`admin` (`idAdmin`, `namaAdmin`, `usiaAdmin`, `usernama`, `password`) VALUES ('12', 'Gilang', '19', 'gilangaw','gilangaw');
+INSERT INTO `kost-hunter`.`admin` (`idAdmin`, `namaAdmin`, `usiaAdmin`, `usernama`, `password`) VALUES ('13', 'Rafid', '19', 'rafidaw', 'rafidaw');
+INSERT INTO `kost-hunter`.`admin` (`idAdmin`, `namaAdmin`, `usiaAdmin`, `usernama`, `password`) VALUES ('14', 'Fandi', '20', 'fandiaw', 'fandiaw');
+
+INSERT INTO `kost-hunter`.`buktipembayaran` (`idBukti`, `nama`, `namaH`, `foto`) VALUES ('21', 'pa dendi', 'Kos Bunga Bakung', 'kos');
+INSERT INTO `kost-hunter`.`buktipembayaran` (`idBukti`, `nama`, `namaH`, `foto`) VALUES ('22', 'Bu Sisi', 'Kos pak ical', 'kos');
+INSERT INTO `kost-hunter`.`buktipembayaran` (`idBukti`, `nama`, `namaH`, `foto`) VALUES ('23', 'Mas jajang', 'Kontrakan pa gembus', 'kontrakan');
+
+INSERT INTO `kost-hunter`.`hunian` (`idH`, `namaH`, `typeH`, `lokasiH`, `hargaH`, `fasilitasH`) VALUES ('31', 'Kos Bunga Bakung', 'kos', 'bunga bakung', '15000000', 'kamar mandi dalam');
+INSERT INTO `kost-hunter`.`hunian` (`idH`, `namaH`, `typeH`, `lokasiH`, `hargaH`, `fasilitasH`) VALUES ('32', 'Kos Pak Ical', 'Kos', 'sukapura', '9000000', 'kulkas');
+INSERT INTO `kost-hunter`.`hunian` (`idH`, `namaH`, `typeH`, `lokasiH`, `hargaH`, `fasilitasH`) VALUES ('33', 'Kontrakan pak gembus', 'Kontrakan', 'sukabirus', '8000000', 'AC');
+
+INSERT INTO `kost-hunter`.`hunt` (`idUser`, `jadwal`, `kontak`) VALUES ('11', 'Kamis', '088888888');
+INSERT INTO `kost-hunter`.`hunt` (`idUser`, `jadwal`, `kontak`) VALUES ('12', 'Jumat', '1857777777');
+INSERT INTO `kost-hunter`.`hunt` (`idUser`, `jadwal`, `kontak`) VALUES ('13', 'Sabtu', '0812345678');
+
+INSERT INTO `kost-hunter`.`user` (`idUser`, `username`, `password`, `nama`, `email`, `umur`, `gender`, `kontak`) VALUES ('11', 'vinny_gr', 'cwewew', 'viny gilang', 'gilang@gmail.com', '21', 'L', '09134532');
+INSERT INTO `kost-hunter`.`user` (`idUser`, `username`, `password`, `nama`, `email`, `umur`, `gender`, `kontak`) VALUES ('12', 'firman', 'variobiru', 'firman z', 'firman@gmail.com', '20', 'L', '01234321');
+INSERT INTO `kost-hunter`.`user` (`idUser`, `username`, `password`, `nama`, `email`, `umur`, `gender`, `kontak`) VALUES ('13', 'annas', 'byson', 'annas wahyu', 'annas@gmail.com', '20', 'L', '012389098');
+
+
+
+select user.iduser, user.username, user.email
+from customer
+where id = 13;
+
+
+select admin.username
+where username = 'gilangaw';
+
+select user.nama, user.username, hunt.jadwal
+from user 
+join hunt using (idUser)
+where user.nama = 'viny_gr';
+
+select buktipembayaran.nama, buktipembayaran.namaH
+from buktipembayaran;
+
+select hunian.namaH, hunian.idH, hunian.hargaH
+from hunian
+where hunian.lokasi = 'sukapura'
+
+
+
+
+
