@@ -1,4 +1,4 @@
-<body class="bg-gradient-primary" background="Assets/Logo/bg7.jpg">
+<body class="bg-gradient-primary">
     <div class="container">
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -10,25 +10,25 @@
                             <div class="col-lg">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">LOGIN</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">LOGIN ADMIN</h1>
                                         <?= $this->session->flashdata('message'); ?>
                                     </div>
-                                    <form class="user" method="post" action="<?= base_url('auth'); ?>">
+                                    <form class="user" method="post" action="<?= base_url('authadmin'); ?>">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Enter Email Address..." value="<?= set_value('email'); ?>">
-                                            <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
+                                            <input type="text" class="form-control form-control-user" id="email_admin" name="email_admin" placeholder="Enter Email Address..." value="<?= set_value('email_admin'); ?>">
+                                            <?= form_error('email_admin', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
-                                            <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
+                                            <input type="password" class="form-control form-control-user" id="password_admin" name="password_admin" placeholder="Password">
+                                            <?= form_error('password_admin', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block" href="<?= base_url('berita'); ?>">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block" href="<?= base_url('berita/indexadmin'); ?>">
                                             Login
                                         </button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="<?= base_url('auth/registration'); ?>">Create an Account!</a>
+                                        <a class="small" href="<?= base_url('authadmin/registrationadmin'); ?>">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>
@@ -38,4 +38,3 @@
             </div>
         </div>
     </div>
-</body>

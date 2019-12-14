@@ -1,4 +1,4 @@
-<body background="Assets/Logo/house.jpg">
+<body background="Assets/Logo/bg4.jpg">
     <div class="container">
         <?php if ($this->session->flashdata('flash')) : ?>
             <div class="row mt-3">
@@ -33,7 +33,9 @@
                                 </td>
                             </tr>
                             <br>
-                            <a href="<?php echo base_url(); ?>berita/detail/<?php echo $brt['id_hunian']; ?>" class="badge badge-primary float-right">Detail</a>
+                            <a href="<?= base_url(); ?>berita/hapus/<?= $brt['id_hunian']; ?>" class="badge badge-danger float-right" onclick="return confirm('Apakah Anda Yakin?');">Hapus</a>
+                            <a href="<?= base_url(); ?>berita/ubahadmin/<?= $brt['id_hunian']; ?>" class="badge badge-success float-right">Ubah</a>
+                            <a href="<?php echo base_url(); ?>berita/detailadmin/<?php echo $brt['id_hunian']; ?>" class="badge badge-primary float-right">Detail</a>
                         </li>
                     <?php endforeach; ?>
                 </ul>

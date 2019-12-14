@@ -17,7 +17,6 @@ class Auth extends CI_Controller
             $this->load->view('auth/login');
             $this->load->view('templates/footer');
         } else {
-            //when validasi cocok
             $this->_login();
         }
     }
@@ -39,7 +38,7 @@ class Auth extends CI_Controller
                     ];
                     $this->session->set_userdata($data);
                     //arahkan ke view admin atau user (arah view selanjutnya)
-                    redirect('user');
+                    redirect('berita');
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Password! </div>');
                     redirect('auth');
@@ -57,7 +56,7 @@ class Auth extends CI_Controller
     public function registration()
     {
         $data['judul'] = "Registration Kost Hunter";
-        $this->load->view('templates/frontheader', $data);
+        $this->load->view('templates/header', $data);
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
             'is_unique' => 'this email already registered!'
@@ -87,7 +86,7 @@ class Auth extends CI_Controller
             ];
             $this->db->insert('user', $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role ="alert">congratulation!your account has been  created. Please  login! </div>');
-            redirect('auth/index');
+            redirect('auth');
         }
     }
     public function logout()

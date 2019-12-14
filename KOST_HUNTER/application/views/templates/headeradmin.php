@@ -16,7 +16,7 @@
     </title>
 </head>
 
-<body>
+<body background="Assets/Logo/house.jpg">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <a class="navbar-brand" href="<?= base_url(); ?>">
@@ -30,18 +30,21 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown">
-                        lOGIN
+                        Action
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?= base_url('auth'); ?>">LOGIN USER</a>
-                        <a class="dropdown-item" href="<?= base_url('AuthAdmin'); ?>">LOGIN ADMIN</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">contact person</a>
+                        <a class="dropdown-item" href="<?= base_url('berita/tambah'); ?>">Pasang iklan</a>
+                        <a class="dropdown-item" href="<?= base_url('home'); ?>">Log out</a>
                     </div>
                 </li>
 
             </ul>
-            <button type="button" class="btn btn-link">WELCOME IN KOST HUNTER </button>
+            <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form> -->
+
+            <!-- <a type="button" class="btn btn-link"><?php echo $user['name']; ?> </a> -->
+            <button type="button" class="btn btn-link">FIND YOUR BEST OCCUPANCY </button>
         </div>
     </nav>
 </body>

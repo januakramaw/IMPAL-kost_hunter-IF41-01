@@ -16,7 +16,7 @@
     </title>
 </head>
 
-<body background="Assets/Logo/house.jpg">
+<body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <a class="navbar-brand" href="<?= base_url(); ?>">
@@ -29,69 +29,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="<?= base_url('berita/index'); ?>" id="navbarDropdown">
-                        NEWS
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown">
+                        Action
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="<?= base_url('home'); ?>">Contact Person</a>
+                        <a class="dropdown-item" href="<?= base_url('home'); ?>">Log out</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        FORUMS
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        DEVICES
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        TOPICS
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        BEST POSTS
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Get Substratum</a>
-                        <a class="dropdown-item" href="#">Get Google Camera</a>
-                        <a class="dropdown-item" href="#">Get Magisk</a>
-                        <a class="dropdown-item" href="#">Get Android Pie ROM</a>
-                        <a class="dropdown-item" href="#">How to use ADB</a>
-                        <a class="dropdown-item" href="#">How to Root</a>
-                        <a class="dropdown-item" href="#">Get YouTube Vanced</a>
-                        <a class="dropdown-item" href="#">Get Xposed</a>
-                    </div>
-                </li>
+
             </ul>
             <!-- <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             </form> -->
-            <a class="btn btn-light my-2 my-sm-0" href="<?= base_url('auth'); ?>">Account</a>
+
+            <!-- <a type="button" class="btn btn-link"><?php echo $user['name']; ?> </a> -->
+            <button type="button" class="btn btn-link">FIND YOUR BEST OCCUPANCY </button>
         </div>
     </nav>
 </body>

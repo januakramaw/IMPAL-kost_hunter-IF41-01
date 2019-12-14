@@ -7,7 +7,7 @@
                     Detail Iklan
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Nama Hunian : <?= $berita['namahunian']; ?></h5>
+                    <h5 class="card-title">Nama Hunian :<?= $berita['namahunian']; ?></h5>
                     <a class="card-text">Type Hunian : <?= $berita['typehunian']; ?></a>
                     <a class="card-text"><br>Fasilitas : <?= $berita['FASILITAS']; ?></a>
                     <a class="card-text"><br>Lokasi : <?= $berita['lokasi']; ?></a>
@@ -23,8 +23,8 @@
 
                 </div>
                 <div class="card-footer">
-                    <a href="<?= base_url("berita") ?>" class="btn btn-primary mb-auto">Kembali</a>
-                    <a href="https://api.whatsapp.com/send?phone=6281386777480&text=Saya%20tertarik%20untuk%20survey%20hunian%20ini%0ANama:%0AJadwal%20survey:%0AKontak:" class="btn btn-secondary">HUNT</a>
+                    <a href="<?= base_url("berita/indexadmin"); ?>" class="btn btn-primary mb-auto">Kembali</a>
+
                 </div>
             </div>
         </div>
