@@ -56,7 +56,7 @@ class Auth extends CI_Controller
     public function registration()
     {
         $data['judul'] = "Registration Kost Hunter";
-        $this->load->view('templates/header', $data);
+        $this->load->view('templates/frontheader', $data);
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
             'is_unique' => 'this email already registered!'
